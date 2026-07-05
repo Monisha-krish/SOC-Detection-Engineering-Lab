@@ -1,0 +1,15 @@
+                Windows 10 VM
+          (Sysmon + Universal Forwarder)
+                       │
+                       │ Event Forwarding
+                       ▼
+              Splunk Enterprise
+                 (Ubuntu VM)
+                       │
+     ┌─────────────────┼──────────────────┐
+     ▼                 ▼                  ▼
+ Detection Rules   Dashboards      Correlation Searches
+     │                 │                  │
+     └─────────────────┼──────────────────┘
+                       ▼
+                Incident Investigation
