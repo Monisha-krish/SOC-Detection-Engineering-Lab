@@ -75,10 +75,4 @@ This detection enables SOC analysts to quickly identify potential SSH brute-forc
 
 ## Screenshot
 
-Add a screenshot of the Splunk search results.
-
-Example:
-
-```
-screenshots/linux/ssh_bruteforce_detection.png
-```
+![SSH Bruteforce Detection](../../screenshots/linux/ssh_bruteforce_detection.png)

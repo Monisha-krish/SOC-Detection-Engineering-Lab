@@ -72,10 +72,4 @@ This detection provides visibility into successful SSH authentication events, al
 
 ## Screenshot
 
-Add a screenshot of the Splunk search results.
-
-Example:
-
-```
-screenshots/linux/successful_logins_detection.png
-```
+![SSH Bruteforce Detection](../../screenshots/linux/successful_logins_detection.png)

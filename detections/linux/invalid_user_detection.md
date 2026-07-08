@@ -84,10 +84,4 @@ This detection provides early visibility into SSH reconnaissance and brute-force
 
 ## Screenshot
 
-Add a screenshot of the Splunk search results.
-
-Example:
-
-```
-screenshots/linux/invalid_user_detection.png
-```
+![Invalid user Detection](../../screenshots/linux/invalid_user_detection.png)

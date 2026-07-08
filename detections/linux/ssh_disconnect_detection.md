@@ -73,10 +73,4 @@ Analysts can quickly identify suspicious SSH connection attempts that terminate 
 
 ## Screenshot
 
-Add a screenshot of the Splunk search results.
-
-Example:
-
-```
-screenshots/linux/ssh_disconnect_detection.png
-```
+![SSH Bruteforce Detection](../../screenshots/linux/ssh_disconnect_detection.png)
