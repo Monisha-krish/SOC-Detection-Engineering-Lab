@@ -67,18 +67,14 @@ This alert enables SOC analysts to rapidly identify SSH brute-force attacks and 
 
 ## Screenshot
 
-Add a screenshot of the alert configuration.
-
-Example:
+### Alert Configuration
 
 ```
-screenshots/alerts/ssh_bruteforce_alert.png
+![SSH Bruteforce Alert](../screenshots/alerts/ssh_bruteforce_alert.png)
 ```
 
-Also include a screenshot of the triggered alert or search results if available.
-
-Example:
+### Triggered Alert
 
 ```
-screenshots/alerts/ssh_bruteforce_alert_results.png
+![Triggered SSH Bruteforce Alert](../screenshots/alerts/ssh_bruteforce_alert_results.png)
 ```

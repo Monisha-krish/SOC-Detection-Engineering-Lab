@@ -66,18 +66,12 @@ The alert provides early visibility into unauthorized SSH authentication attempt
 
 ## Screenshot
 
-Add a screenshot of the alert configuration.
+### Alert Configuration
 
-Example:
-
-```
-screenshots/alerts/invalid_user_ssh_alert.png
+![invalid user Alert](../screenshots/alerts/invalid_user_ssh_alert.png)
 ```
 
-Also include a screenshot of the triggered alert or search results if available.
+### Triggered Alert
 
-Example:
-
-```
-screenshots/alerts/invalid_user_ssh_alert_results.png
+![invalid user SSH Alert](../screenshots/alerts/invalid_user_ssh_alert_results.png)
 ```
