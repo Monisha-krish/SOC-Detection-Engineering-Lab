@@ -69,7 +69,6 @@ The alert provides early visibility into unauthorized SSH authentication attempt
 ### Alert Configuration
 
 ![invalid user Alert](../screenshots/alerts/invalid_user_ssh_alert.png)
-```
 
 ### Triggered Alert
 
