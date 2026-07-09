@@ -1,6 +1,6 @@
 # 🛡️ SOC Detection Engineering Lab
 
-A hands-on Security Operations Center (SOC) Detection Engineering Lab built using **Splunk Enterprise**, **Windows 10**, **Ubuntu Linux**, **Sysmon**, and the **Splunk Universal Forwarder**. This project demonstrates how to collect, monitor, detect, investigate, and correlate security events across Windows and Linux systems using real log sources and detection logic.
+A hands-on Security Operations Center (SOC) Detection Engineering Lab built using **Splunk Enterprise**, **Windows 10**, **Ubuntu Linux**, **Sysmon**, and the **Splunk Universal Forwarder**. This project demonstrates how to collect, monitor, detect, analyze, and correlate security events across Windows and Linux systems using real log sources and detection logic.
 
 ---
 
@@ -8,15 +8,14 @@ A hands-on Security Operations Center (SOC) Detection Engineering Lab built usin
 
 The goal of this project is to simulate an enterprise SOC environment by collecting logs from multiple operating systems, creating detection rules, correlating suspicious activity, mapping detections to the MITRE ATT&CK framework, and visualizing security events through Splunk dashboards.
 
-This repository showcases practical skills in:
+This repository demonstrates hands-on experience in:
 
-* SOC Monitoring
-* Detection Engineering
-* Threat Hunting
-* Security Log Analysis
-* Incident Investigation
-* MITRE ATT&CK Mapping
-* Splunk Dashboard Development
+- SOC Monitoring
+- Detection Engineering
+- Threat Hunting
+- Security Log Analysis
+- Splunk Dashboard Development
+- MITRE ATT&CK Mapping
 
 ---
 
@@ -34,22 +33,26 @@ This repository showcases practical skills in:
 
 # 🏗️ Lab Architecture
 
-```
-Windows 10 VM
-(Sysmon + Splunk Universal Forwarder)
-            │
-            │ Forwarded Events
-            ▼
-     Splunk Enterprise
-        (Ubuntu VM)
-            │
- ┌──────────┼──────────┐
- │          │          │
- ▼          ▼          ▼
-Detection  Dashboard  Investigation
-Rules      Visuals    & Alerts
-```
+```mermaid
+graph LR
 
+A[Windows 10 VM]
+B[Sysmon]
+C[Splunk Universal Forwarder]
+D[Splunk Enterprise]
+E[Ubuntu Linux]
+F[Detection Rules]
+G[Dashboards]
+H[Alerts]
+
+A --> B
+B --> C
+C --> D
+E --> D
+D --> F
+D --> G
+D --> H
+```
 ---
 
 # ⚙️ Technologies Used
@@ -68,26 +71,40 @@ Rules      Visuals    & Alerts
 
 # 📂 Repository Structure
 
-```
+```text
 SOC-Detection-Engineering-Lab
 │
-├── architecture
-├── docs
-├── detections
-│   ├── linux
-│   └── windows
-├── correlation_searches
-├── dashboards
-├── screenshots
-│   ├── linux
-│   ├── windows
-│   ├── dashboard
-│   └── alerts
-├── sample_logs
-│   ├── linux
-│   └── windows
-└── alerts
+├── alerts/
+├── architecture/
+├── correlation_searches/
+├── dashboards/
+├── detections/
+│   ├── linux/
+│   └── windows/
+├── screenshots/
+│   ├── alerts/
+│   ├── dashboard/
+│   ├── linux/
+│   └── windows/
+├── LICENSE
+└── README.md
+
 ```
+
+# 🚀 Features
+
+This project demonstrates the following Security Operations Center (SOC) Detection Engineering capabilities:
+
+- Centralized log collection using Splunk Enterprise
+- Windows security monitoring using Sysmon
+- Linux SSH authentication monitoring
+- Detection engineering using SPL (Search Processing Language)
+- Correlation searches for multi-stage attack detection
+- Scheduled alerts for suspicious activities
+- Interactive SOC dashboards
+- MITRE ATT&CK technique mapping
+- Windows and Linux security event analysis
+- Comprehensive detection and alert documentation
 
 ---
 
@@ -126,18 +143,21 @@ This project includes correlation searches that combine multiple security events
 
 # 🎯 MITRE ATT&CK Coverage
 
-Example techniques covered in this project include:
+The following MITRE ATT&CK techniques are demonstrated through the implemented detection rules and correlation searches.
 
-* Command and Scripting Interpreter
-* PowerShell
-* System Information Discovery
-* Network Service Discovery
-* Registry Modification
-* Valid Accounts
-* Brute Force
-* Remote Services
+| Tactic | Technique | Technique ID |
+|---------|-----------|--------------|
+| Execution | PowerShell | T1059.001 |
+| Execution | Command and Scripting Interpreter | T1059 |
+| Discovery | System Information Discovery | T1082 |
+| Discovery | Network Service Discovery | T1046 |
+| Persistence | Registry Run Keys / Startup Folder | T1547.001 |
+| Credential Access | Brute Force | T1110 |
+| Initial Access | External Remote Services (SSH) | T1133 |
+| Defense Evasion | Signed Binary Proxy Execution (Certutil) | T1218 |
+| Persistence | Valid Accounts | T1078 |
 
-Additional mappings will be documented alongside each detection.
+Additional mappings are documented within the corresponding detection and alert documentation.
 
 ---
 
@@ -155,65 +175,95 @@ The project includes dashboards for monitoring:
 * SOC Overview
 
 ---
+# 📸 Dashboard Preview
+
+### SOC Overview Dashboard
+
+![SOC Overview](screenshots/dashboard/soc_overview_dashboard.png)
+
+---
+
+### Windows Security Dashboard
+
+![Windows Dashboard](screenshots/dashboard/windows_security_dashboard.png)
+
+---
+
+### Linux Security Monitoring Dashboard
+
+![Linux Dashboard](screenshots/dashboard/linux_security_dashboard.png)
 
 # 🚨 Sample Alerts
 
-Examples of alerts implemented:
+The project includes scheduled Splunk alerts for:
 
-* Excessive Failed SSH Logins
-* PowerShell Execution Detection
-* Suspicious Network Connections
-* Registry Persistence Detection
-* Brute Force Correlation Alert
-
----
-
-# 📸 Screenshots
-
-Screenshots of the following components will be included:
-
-* Splunk Dashboards
-* Detection Searches
-* Correlation Searches
-* Windows Monitoring
-* Linux Monitoring
-* Alert Generation
+- PowerShell Execution Alert
+- PowerShell Network Activity Alert
+- Invalid User SSH Alert
+- SSH Brute Force Alert
 
 ---
 
-# 📈 Skills Demonstrated
+## 📈 Skills Demonstrated
 
-* Splunk Enterprise Administration
-* SIEM Monitoring
-* Detection Engineering
-* Security Log Analysis
-* Threat Hunting
-* Windows Security Monitoring
-* Linux Security Monitoring
-* Sysmon Configuration
-* SPL Query Development
-* MITRE ATT&CK Mapping
-* Incident Investigation
-* Security Dashboard Development
+### SIEM & Monitoring
+- Splunk Enterprise
+- Sysmon
+- Log Analysis
+
+### Detection Engineering
+- SPL Query Development
+- Alert Creation
+- Correlation Searches
+
+### Security Operations
+- Incident Investigation
+- Windows Security Monitoring
+- Linux Security Monitoring
+
+### Frameworks
+- MITRE ATT&CK
+
+### Operating Systems
+
+- Windows 10
+- Ubuntu Linux
 
 ---
 
 # 🚀 Future Enhancements
 
-Planned improvements include:
-
-* Sigma Rule Integration
-* Detection-as-Code
-* Custom Splunk Apps
-* Threat Intelligence Integration
-* Additional Correlation Searches
-* Automated Alerting
-* IOC Enrichment
-* SOAR Integration
+- Expand Windows and Linux detection coverage
+- Add Sigma rule support
+- Integrate threat intelligence feeds
+- Develop additional correlation searches
+- Build custom Splunk dashboards
+- Implement automated alert enrichment
 
 ---
 
 # 📄 License
 
 This project is shared for educational and portfolio purposes.
+
+# 👩‍💻 Author
+
+**Monisha M R**
+
+Security Analyst | SOC Analyst Aspirant | Detection Engineering Enthusiast
+
+### Skills
+
+- Splunk Enterprise
+- Sysmon
+- Windows Security
+- Linux Security
+- SPL
+- Threat Hunting
+- MITRE ATT&CK
+- Detection Engineering
+
+GitHub: https://github.com/Monisha-krish
+
+LinkedIn: https://linkedin.com/in/monisha-m-r-b27189260/
 
