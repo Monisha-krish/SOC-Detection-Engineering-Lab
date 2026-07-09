@@ -35,23 +35,13 @@ This repository demonstrates hands-on experience in:
 
 ```mermaid
 graph LR
-
-A[Windows 10 VM]
-B[Sysmon]
-C[Splunk Universal Forwarder]
-D[Splunk Enterprise]
-E[Ubuntu Linux]
-F[Detection Rules]
-G[Dashboards]
-H[Alerts]
-
-A --> B
-B --> C
-C --> D
-E --> D
-D --> F
-D --> G
-D --> H
+    A[Windows 10 VM] --> B[Sysmon]
+    B --> C[Splunk Universal Forwarder]
+    C --> D[Splunk Enterprise]
+    E[Ubuntu Linux] --> D
+    D --> F[Detection Rules]
+    D --> G[Dashboards]
+    D --> H[Alerts]
 ```
 ---
 
@@ -245,12 +235,14 @@ The project includes scheduled Splunk alerts for:
 # 📄 License
 
 This project is shared for educational and portfolio purposes.
+---
 
 # 👩‍💻 Author
 
 **Monisha M R**
 
 Security Analyst | SOC Analyst Aspirant | Detection Engineering Enthusiast
+---
 
 ### Skills
 
